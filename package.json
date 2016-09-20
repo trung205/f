@@ -1,0 +1,14 @@
+{
+  "name": "f",
+  "version": "1.0.0",
+  "description": "Functional Microservice Request Library",
+  "main": "index.js",
+  "bin": {
+    "f": "cli/bin.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keith Horwood",
+  "license": "MIT"
+}
