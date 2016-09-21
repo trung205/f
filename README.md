@@ -66,7 +66,7 @@ f('polybit/distance/haversine')({
 	to: [37.77, -122.42]
 }, (err, result) => {
 
-	console.log(result); // logs 3645473 (metres!)
+	console.log(result); // logs 3644329 (metres!)
 
 });
 ```
