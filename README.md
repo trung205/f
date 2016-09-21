@@ -188,7 +188,7 @@ and Ruby are both capable of making simple HTTP requests to a microservice, but
 do not share packages in common with the Node ecosystem. Microservices solve
 this problem.
 
-We plan to have more SDKs out in the coming months, you can also [run your microservices from the web](https://github.com/poly/f-web). :)
+We plan to have more SDKs out in the coming months. :)
 
 ## Where can I find Microservices to use?
 
