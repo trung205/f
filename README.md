@@ -1,4 +1,4 @@
-# f
+# ![f](http://stdlib.com/static/images/f-128.png)
 ## Functional Microservice Request Library
 
 `f` is a Functional Microservice Request Library. It's a zero-dependency module
@@ -22,7 +22,7 @@ $ npm install f
 
 And use it with the following line wherever you need it:
 
-```
+```javascript
 const f = require('f');
 ```
 
