@@ -1,7 +1,7 @@
 {
   "name": "f",
   "version": "1.0.0",
-  "description": "Functional Microservice Request Library for the Web",
+  "description": "Functional Microservice Request Library",
   "main": "web/f.js",
   "author": "Keith Horwood",
   "repository": {

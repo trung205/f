@@ -1,8 +1,8 @@
 {
   "name": "f",
   "version": "1.0.0",
-  "description": "Functional Microservice Request Library for Node.js",
-  "main": "index.js",
+  "description": "Functional Microservice Request Library",
+  "main": "lib/f.js",
   "bin": {
     "f": "cli/bin.js"
   },
