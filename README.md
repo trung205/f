@@ -153,16 +153,18 @@ expensive tasks from your core infrastructure, or providing standardized
 functionality to many different systems (at the cost of a few ms of network latency).
 
 An example would be image processing. Resizing, cropping and editing may not be
-done frequently on your webserver, but when it does, it can slow everything down.
-Offloading to a scalable, stateless microservice that your application simply
+done frequently on your webserver, but when it does happen, it can slow everything
+down. Offloading to a scalable, stateless microservice that your application simply
 calls via the `f` module is a simple solution.
 
 Another example would be the haversine distance formula given above. You may
 have found a great npm package, but what if that service functionality needs
 to be shared across multiple applications written in different languages? Python
 and Ruby are both capable of making simple HTTP requests to a microservice, but
-do not share npm in common with the Node ecosystem. We plan to have more SDKs
-out in the coming months. :)
+do not share packages in common with the Node ecosystem. Microservices solve
+this problem.
+
+We plan to have more SDKs out in the coming months, you can also [run your microservices from the web](https://github.com/poly/f-web). :)
 
 ## Where can I find Microservices to use?
 
@@ -186,4 +188,5 @@ We're actively working our buns off to build the future of cloud development,
 beginning with microservice adoption. We'd love your support!
 
 Sign up for [stdlib: A Standard Library for the Web](https://stdlib.com).
+
 Follow us on Twitter [@polybit](https://twitter.com/polybit).
