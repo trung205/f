@@ -20,6 +20,12 @@ For usage in an existing Node.js project, add it to your dependencies:
 $ npm install f
 ```
 
+And use it with the following line wherever you need it:
+
+```
+const f = require('f');
+```
+
 ### Command Line
 
 For access to the CLI, install `f` globally using npm:
@@ -55,7 +61,6 @@ The call to this service using `f`, might look like this;
 
 ```javascript
 // Calculate distance from Toronto to San Francisco
-const f = require('f');
 f('polybit/distance/haversine')({
 	from: [43.65, -79.38],
 	to: [37.77, -122.42]
