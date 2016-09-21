@@ -14,16 +14,33 @@ line (using the `f` command) without having to use the Node.js REPL.
 
 ### Node.js
 
-Installation is simple. For the CLI tools install `f` globally:
+For usage in an existing Node.js project, add it to your dependencies:
+
+```
+$ npm install f
+```
+
+### Command Line
+
+For access to the CLI, install `f` globally using npm:
 
 ```
 $ npm install f -g
 ```
 
-For usage in an existing Node.js project, add it to your dependencies:
+### Web
+
+Using Bower...
 
 ```
-$ npm install f
+$ bower install poly/f
+```
+
+Or, simply copy `web/f.js` to wherever you keep your vendor scripts and include
+it as a script:
+
+```html
+<script src="path/to/f.js"></script>
 ```
 
 ## How do I use f?
