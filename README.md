@@ -1,5 +1,5 @@
 # f
-## Functional Microservice Request Library for Node.js
+## Functional Microservice Request Library
 
 `f` is a Functional Microservice Request Library. It's a zero-dependency module
 that wraps HTTP(S) requests, intended for use with stateless, functional
@@ -11,6 +11,8 @@ configured to use any gateway (and associated platform or infrastructure provide
 line (using the `f` command) without having to use the Node.js REPL.
 
 ## Installation
+
+### Node.js
 
 Installation is simple. For the CLI tools install `f` globally:
 
