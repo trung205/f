@@ -1,11 +1,8 @@
 {
   "name": "f",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Functional Microservice Request Library",
   "main": "lib/f.js",
-  "bin": {
-    "f": "cli/bin.js"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
