@@ -55,6 +55,7 @@ var f = (function() {
         (config.gateway.port ? ':' + config.gateway.port : '') +
         config.gateway.path + name
       );
+      xhr.responseType = 'blob';
       Object.keys(headers).forEach(function(h) { xhr.setRequestHeader(h, headers[h]); });
       xhr.addEventListener('readystatechange', function() {
 
@@ -68,23 +69,29 @@ var f = (function() {
             return callback(new Error('Could not run function.'));
           }
 
-          var response = xhr.responseText;
-          var contentType = xhr.getResponseHeader('content-type');
+          var response = xhr.response;
+          var contentType = response.type;
 
-          if (contentType === 'application/json') {
-            try {
-              response = JSON.parse(response);
-            } catch(e) {
-              response = null;
-            }
-          } else if (contentType.match(/^text\/.*$/i)) {
-            response = response;
-          } else {
-            response = new Blob([response], {type: contentType});
-          }
-
-          if (((xhr.status / 100) | 0) !== 2) {
-            return callback(new Error(response));
+          if (
+            contentType === 'application/json' ||
+            contentType.match(/^text\/.*$/i) ||
+            ((xhr.status / 100) | 0) !== 2
+          ) {
+            var reader = new FileReader();
+            reader.addEventListener('loadend', function() {
+              var result = reader.result;
+              if (((xhr.status / 100) | 0) !== 2) {
+                return callback(new Error(result));
+              } else if (contentType === 'application/json') {
+                try {
+                  result = JSON.parse(reader.result);
+                } catch(e) {
+                  return callback(new Error('Invalid Response JSON'));
+                }
+              }
+              return callback(null, result);
+            });
+            reader.readAsText(response);
           } else {
             return callback(null, response);
           }
