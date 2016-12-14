@@ -71,6 +71,7 @@ var f = (function() {
 
           var response = xhr.response;
           var contentType = response.type;
+          var resheaders = xhr.getAllResponseHeaders();
 
           if (
             contentType === 'application/json' ||
@@ -89,11 +90,11 @@ var f = (function() {
                   return callback(new Error('Invalid Response JSON'));
                 }
               }
-              return callback(null, result);
+              return callback(null, result, resheaders);
             });
             reader.readAsText(response);
           } else {
-            return callback(null, response);
+            return callback(null, response, resheaders);
           }
 
         }
