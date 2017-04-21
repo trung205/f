@@ -20,6 +20,7 @@ var f = (function() {
 
   function f(name, mode, config) {
 
+    name = name[name.length - 1] === '/' ? name : name + '/';
     mode = mode || 'json';
     config = config || f.config;
 

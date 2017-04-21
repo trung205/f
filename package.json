@@ -1,6 +1,6 @@
 {
   "name": "f",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Functional Microservice Request Library",
   "main": "lib/f.js",
   "scripts": {
